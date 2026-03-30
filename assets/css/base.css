@@ -1,0 +1,195 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #f5f4f1;
+  --bg-white: #ffffff;
+  --bg-section: #eeecea;
+  --text: #1c2535;
+  --text-mid: #4a5568;
+  --text-light: #8a96a8;
+  --border: #dddbd6;
+  --border-light: #e8e6e1;
+  --accent: #1d5fa8;
+  --accent-dk: #164d8a;
+  --accent-bg: #eef3fa;
+  --accent-bd: #c3d6ee;
+  --white: #ffffff;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.07), 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.1);
+  --font-head: "Outfit", sans-serif;
+  --font-body: "Source Sans 3", sans-serif;
+  --transition: 0.25s ease;
+  --danger: #dc2626;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+main {
+  display: block;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 99px;
+}
+
+section {
+  padding: 88px 6vw;
+}
+
+.section-tag {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: var(--accent);
+  font-family: var(--font-head);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.section-title {
+  max-width: 600px;
+  color: var(--text);
+  font-family: var(--font-head);
+  font-size: clamp(1.85rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+.section-desc {
+  max-width: 540px;
+  margin-top: 14px;
+  color: var(--text-mid);
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 1.75;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 26px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.btn-solid {
+  background: var(--accent);
+  color: var(--white);
+}
+
+.btn-solid:hover {
+  background: var(--accent-dk);
+}
+
+.btn-outline {
+  border: 1.5px solid var(--border);
+  background: transparent;
+  color: var(--text);
+}
+
+.btn-outline:hover {
+  border-color: var(--text-mid);
+  background: var(--bg-white);
+}
+
+.btn:focus-visible,
+a:focus-visible,
+button:focus-visible,
+.form-control:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.services-cta {
+  flex-shrink: 0;
+  align-self: flex-end;
+  white-space: nowrap;
+}
+
+.about-body-intro {
+  margin-top: 18px;
+}
+
+.about-card-title {
+  margin-bottom: 22px;
+  color: var(--text);
+  font-family: var(--font-head);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.contact-form-shell.is-hidden {
+  display: none;
+}
+
+.form-success.is-visible {
+  display: block;
+}
+
+.form-control.is-invalid {
+  border-color: var(--danger);
+}

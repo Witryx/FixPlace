@@ -1,0 +1,82 @@
+@media (max-width: 960px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-right {
+    display: none;
+  }
+
+  #hero::before {
+    display: none;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .why-grid,
+  .about-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-grid {
+    gap: 48px;
+  }
+
+  .about-grid {
+    gap: 48px;
+  }
+
+  .contact-grid {
+    gap: 40px;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  section {
+    padding: 64px 20px;
+  }
+
+  nav {
+    padding: 0 20px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .services-grid,
+  .form-row-2,
+  .about-pillars,
+  .aside-stats,
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form {
+    padding: 24px 20px;
+  }
+
+  .footer-top {
+    gap: 32px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-meta {
+    gap: 24px;
+  }
+}

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FixPlace — Opravna elektroniky</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/sections.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+<body>
+  <!-- NAVIGACE -->
+  <nav>
+    <a href="#hero" class="nav-logo">Fix<em>Place</em></a>
+    <ul class="nav-links">
+      <li><a href="#services">Služby</a></li>
+      <li><a href="#why">Proč my</a></li>
+      <li><a href="#about">O nás</a></li>
+      <li><a href="#contact" class="btn-nav">Kontakt</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Otevřít menu" aria-controls="mobileMenu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="#services" data-close-menu>Služby</a>
+    <a href="#why" data-close-menu>Proč my</a>
+    <a href="#about" data-close-menu>O nás</a>
+    <a href="#contact" data-close-menu>Kontakt</a>
+  </div>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-inner">
+        <div class="hero-left">
+          <div class="hero-breadcrumb">Opravna elektroniky · Praha</div>
+
+          <h1 class="hero-title">
+            Rychlá &amp; spolehlivá<br />
+            oprava <span class="blue">elektroniky</span>
+          </h1>
+
+          <p class="hero-sub">
+            Opravujeme mobilní telefony, notebooky, tablety, televizory a další zařízení. Profesionálně, rychle a za přijatelnou cenu.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-solid">
+              Poptat opravu
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="#services" class="btn btn-outline">Naše služby</a>
+          </div>
+
+          <div class="hero-meta">
+            <div>
+              <div class="hero-stat-num">500<em>+</em></div>
+              <div class="hero-stat-label">opravených zařízení</div>
+            </div>
+            <div>
+              <div class="hero-stat-num">4,9<em>★</em></div>
+              <div class="hero-stat-label">hodnocení zákazníků</div>
+            </div>
+            <div>
+              <div class="hero-stat-num">24<em>h</em></div>
+              <div class="hero-stat-label">průměrná doba opravy</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-card-group">
+            <div class="hero-info-card">
+              <div class="hic-icon">📱</div>
+              <div>
+                <div class="hic-title">Rozbité displeje</div>
+                <div class="hic-sub">Výměna displeje do 2 hodin</div>
+              </div>
+            </div>
+            <div class="hero-info-card">
+              <div class="hic-icon">🔋</div>
+              <div>
+                <div class="hic-title">Výměna baterií</div>
+                <div class="hic-sub">Všechny značky a modely</div>
+              </div>
+            </div>
+            <div class="hero-info-card">
+              <div class="hic-icon">💻</div>
+              <div>
+                <div class="hic-title">Oprava notebooků</div>
+                <div class="hic-sub">Diagnostika zdarma</div>
+              </div>
+            </div>
+            <div class="hero-info-card">
+              <div class="hic-icon">🛡️</div>
+              <div>
+                <div class="hic-title">Záruka na opravy</div>
+                <div class="hic-sub">90 dní na díly i práci</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLUŽBY -->
+    <section id="services">
+      <div class="reveal">
+        <div class="services-header">
+          <div>
+            <div class="section-tag">Naše služby</div>
+            <h2 class="section-title">Co opravujeme</h2>
+            <p class="section-desc">Specializujeme se na opravy veškeré běžné elektroniky — od telefonů až po televizory.</p>
+          </div>
+          <a href="#contact" class="btn btn-solid services-cta">Poptat opravu</a>
+        </div>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <span class="svc-icon">📱</span>
+          <div class="svc-name">Mobilní telefony</div>
+          <div class="svc-desc">Výměna displeje, baterie, nabíjecího konektoru. Oprava po pádu do vody. Všechny značky — Samsung, iPhone, Xiaomi a další.</div>
+          <div class="svc-tag">Oprava do 2 hodin</div>
+        </div>
+        <div class="service-card reveal">
+          <span class="svc-icon">⌚</span>
+          <div class="svc-name">Chytré hodinky</div>
+          <div class="svc-desc">Výměna displeje, oprava tlačítek a nabíjení. Apple Watch, Samsung Galaxy Watch, Garmin a další modely.</div>
+          <div class="svc-tag">Všechny značky</div>
+        </div>
+        <div class="service-card reveal">
+          <span class="svc-icon">📟</span>
+          <div class="svc-name">Tablety</div>
+          <div class="svc-desc">Oprava a výměna displeje, digitizéru, baterie či nabíjecího portu. iPady i Android tablety.</div>
+          <div class="svc-tag">iPad i Android</div>
+        </div>
+        <div class="service-card reveal">
+          <span class="svc-icon">💻</span>
+          <div class="svc-name">Notebooky</div>
+          <div class="svc-desc">Výměna klávesnice, displeje, SSD a RAM. Čištění chladiče, reinstalace systému. Mac i Windows.</div>
+          <div class="svc-tag">Mac i Windows</div>
+        </div>
+        <div class="service-card reveal">
+          <span class="svc-icon">🖥️</span>
+          <div class="svc-name">Stolní počítače</div>
+          <div class="svc-desc">Diagnostika hardware, výměna komponent, upgrade grafické karty nebo procesoru, čištění a servis.</div>
+          <div class="svc-tag">PC i Mac</div>
+        </div>
+        <div class="service-card reveal">
+          <span class="svc-icon">📺</span>
+          <div class="svc-name">Televizory</div>
+          <div class="svc-desc">Oprava LED i LCD panelů, napájecích desek, HDMI portů a problémů se softwarem Smart TV.</div>
+          <div class="svc-tag">Všechny typy</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROČ MY -->
+    <section id="why">
+      <div class="reveal">
+        <div class="section-tag">Proč FixPlace</div>
+        <h2 class="section-title">Jednoduše proto, že nám záleží na kvalitě</h2>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-reasons reveal">
+          <div class="why-row">
+            <div class="why-num">01</div>
+            <div>
+              <div class="why-row-title">Rychlá oprava</div>
+              <div class="why-row-desc">Většinu oprav zvládáme do 24 hodin. Jednodušší závady — například výměna displeje — opravíme za 1–2 hodiny na počkání.</div>
+            </div>
+          </div>
+          <div class="why-row">
+            <div class="why-num">02</div>
+            <div>
+              <div class="why-row-title">Zkušení technici</div>
+              <div class="why-row-desc">Naši technici mají zkušenosti se stovkami různých modelů zařízení. Váš přístroj je v dobrých rukou.</div>
+            </div>
+          </div>
+          <div class="why-row">
+            <div class="why-num">03</div>
+            <div>
+              <div class="why-row-title">Jasné a férové ceny</div>
+              <div class="why-row-desc">Diagnostika zdarma. Cenu opravy sdělíme předem — žádné skryté poplatky ani překvapení na konci.</div>
+            </div>
+          </div>
+          <div class="why-row">
+            <div class="why-num">04</div>
+            <div>
+              <div class="why-row-title">Individuální přístup</div>
+              <div class="why-row-desc">Ke každému zákazníkovi přistupujeme osobně. Závadu vysvětlíme srozumitelně a navrhneme nejlepší řešení.</div>
+            </div>
+          </div>
+          <div class="why-row">
+            <div class="why-num">05</div>
+            <div>
+              <div class="why-row-title">Záruka 90 dní</div>
+              <div class="why-row-desc">Na každou opravu poskytujeme 90denní záruku na použité díly i provedenou práci. Opravíme bez příplatku, pokud by se problém opakoval.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="why-aside reveal">
+          <div class="aside-stats">
+            <div class="aside-stat">
+              <div class="aside-stat-num">500<em>+</em></div>
+              <div class="aside-stat-label">opravených zařízení</div>
+            </div>
+            <div class="aside-stat">
+              <div class="aside-stat-num">4,9<em>★</em></div>
+              <div class="aside-stat-label">průměrné hodnocení</div>
+            </div>
+          </div>
+
+          <div class="aside-review">
+            <div class="aside-stars">★ ★ ★ ★ ★</div>
+            <div class="aside-review-text">„Přinesla jsem rozbitý iPhone a opravili mi ho za dvě hodiny. Cena odpovídala tomu, co říkali předem. Doporučuji každému.“</div>
+            <div class="aside-reviewer">— Jana K., spokojená zákaznice</div>
+          </div>
+
+          <div class="aside-review aside-review-alt">
+            <div class="aside-stars">★ ★ ★ ★ ★</div>
+            <div class="aside-review-text">„Opravili mi notebook, který jinde označili za neopravitelný. Skvělá práce a příjemný přístup.“</div>
+            <div class="aside-reviewer">— Tomáš M., spokojený zákazník</div>
+          </div>
+
+          <div class="aside-badge">
+            <div class="aside-badge-icon">🛡️</div>
+            <div>
+              <div class="aside-badge-title">Záruka na opravu 90 dní</div>
+              <div class="aside-badge-sub">Na díly i práci, bez výjimek</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- O NÁS -->
+    <section id="about">
+      <div class="about-grid">
+        <div class="reveal">
+          <div class="section-tag">O nás</div>
+          <h2 class="section-title">Místní opravna, na které záleží</h2>
+          <p class="about-body about-body-intro">
+            FixPlace vznikl z přesvědčení, že oprava elektroniky má být dostupná, poctivá a rychlá. Začínali jsme jako malá dílna a dnes obsluhujeme stovky zákazníků, kteří se k nám rádi vracejí.
+          </p>
+          <p class="about-body">
+            Každé zařízení opravujeme pečlivě a s respektem k zákazníkově důvěře. Nepoužíváme zbytečné díly ani nepřeháníme ceny — děláme jen to, co je skutečně potřeba.
+          </p>
+
+          <div class="about-pillars">
+            <div class="pillar">
+              <div class="pillar-icon">🔍</div>
+              <div class="pillar-title">Přesná diagnostika</div>
+              <div class="pillar-desc">Hledáme příčinu, ne jen příznaky.</div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon">🔧</div>
+              <div class="pillar-title">Kvalitní díly</div>
+              <div class="pillar-desc">Pouze prověřené náhradní díly.</div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon">🤝</div>
+              <div class="pillar-title">Zákazník na prvním místě</div>
+              <div class="pillar-desc">Vaše spokojenost je naší prioritou.</div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon">📅</div>
+              <div class="pillar-title">Praxe od roku 2020</div>
+              <div class="pillar-desc">Elektroniku opravujeme už od roku 2020.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal" id="skillsBlock">
+          <div class="about-card-title">Úspěšnost oprav podle kategorie</div>
+          <div class="about-skills">
+            <div class="skill-item">
+              <div class="skill-head"><span>Mobilní telefony</span><span>98 %</span></div>
+              <div class="skill-track"><div class="skill-fill" data-progress="98"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-head"><span>Tablety</span><span>97 %</span></div>
+              <div class="skill-track"><div class="skill-fill" data-progress="97"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-head"><span>Chytré hodinky</span><span>96 %</span></div>
+              <div class="skill-track"><div class="skill-fill" data-progress="96"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-head"><span>Notebooky</span><span>95 %</span></div>
+              <div class="skill-track"><div class="skill-fill" data-progress="95"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-head"><span>Stolní počítače</span><span>93 %</span></div>
+              <div class="skill-track"><div class="skill-fill" data-progress="93"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-head"><span>Televizory</span><span>90 %</span></div>
+              <div class="skill-track"><div class="skill-fill" data-progress="90"></div></div>
+            </div>
+          </div>
+          <div class="skills-note">Údaje vycházejí z dokončených oprav za posledních 12 měsíců.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section id="contact">
+      <div class="reveal">
+        <div class="section-tag">Kontakt</div>
+        <h2 class="section-title">Přijďte nás navštívit nebo nám napište</h2>
+        <p class="section-desc">Rádi si vaše zařízení prohlédneme a navrhneme nejlepší řešení. Diagnostika je zdarma.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-details reveal">
+          <a href="tel:+420123456789" class="contact-item">
+            <div class="ci-icon">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.7A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.15a16 16 0 006.29 6.29l1.42-1.42a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg>
+            </div>
+            <div>
+              <div class="ci-label">Telefon</div>
+              <div class="ci-value">+420 123 456 789</div>
+            </div>
+          </a>
+
+          <a href="mailto:info@fixplace.cz" class="contact-item">
+            <div class="ci-icon">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </div>
+            <div>
+              <div class="ci-label">E-mail</div>
+              <div class="ci-value">info@fixplace.cz</div>
+            </div>
+          </a>
+
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=V%C3%A1clavsk%C3%A9+n%C3%A1m%C4%9Bst%C3%AD+1,+Praha+1" target="_blank" rel="noreferrer" class="contact-item">
+            <div class="ci-icon">
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <div>
+              <div class="ci-label">Adresa</div>
+              <div class="ci-value">Václavské náměstí 1, Praha 1</div>
+            </div>
+          </a>
+
+          <div class="hours-box">
+            <div class="hours-box-title">Otevírací doba</div>
+            <div class="hours-row"><span class="day">Pondělí – Pátek</span><span class="time-open">8:00 – 18:00</span></div>
+            <div class="hours-row"><span class="day">Sobota</span><span class="time-open">9:00 – 14:00</span></div>
+            <div class="hours-row"><span class="day">Neděle</span><span class="time-closed">Zavřeno</span></div>
+          </div>
+        </div>
+
+        <div class="contact-form reveal">
+          <form id="contactForm" class="contact-form-shell" novalidate>
+            <div class="form-title">Poptávkový formulář</div>
+            <div class="form-subtitle">Vyplňte formulář a ozveme se vám do několika hodin.</div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label class="form-label" for="firstName">Jméno</label>
+                <input id="firstName" name="firstName" type="text" class="form-control" placeholder="Jan" autocomplete="given-name" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="lastName">Příjmení</label>
+                <input id="lastName" name="lastName" type="text" class="form-control" placeholder="Novák" autocomplete="family-name" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">E-mail</label>
+              <input id="email" name="email" type="email" class="form-control" placeholder="jan@example.com" autocomplete="email" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="phone">Telefon</label>
+              <input id="phone" name="phone" type="tel" class="form-control" placeholder="+420 ..." autocomplete="tel" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="deviceType">Typ zařízení</label>
+              <select id="deviceType" name="deviceType" class="form-control" required>
+                <option value="" disabled selected>Vyberte zařízení…</option>
+                <option>Mobilní telefon</option>
+                <option>Chytré hodinky</option>
+                <option>Tablet</option>
+                <option>Notebook</option>
+                <option>Stolní počítač</option>
+                <option>Televizor</option>
+                <option>Jiné</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="issueDescription">Popis závady</label>
+              <textarea id="issueDescription" name="issueDescription" class="form-control" placeholder="Popište, co se s vaším zařízením děje. Čím více informací uvedete, tím přesněji vám pomůžeme." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-solid form-submit-btn">
+              Odeslat poptávku
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+          </form>
+
+          <div class="form-success" id="formSuccess" aria-live="polite" tabindex="-1">
+            <div class="form-success-icon">✅</div>
+            <div class="form-success-title">Poptávka odeslána!</div>
+            <div class="form-success-text">Ozveme se vám do několika hodin.<br />Děkujeme za důvěru.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- PATIČKA -->
+  <footer>
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">Fix<em>Place</em></div>
+        <p class="footer-tagline">Rychlá, spolehlivá a poctivá oprava elektroniky. Sloužíme zákazníkům od roku 2020.</p>
+        <div class="social-row">
+          <a href="#" class="social-link" title="Facebook" aria-label="Facebook">fb</a>
+          <a href="#" class="social-link" title="Instagram" aria-label="Instagram">ig</a>
+          <a href="#" class="social-link" title="Google" aria-label="Google">G</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-head">Navigace</div>
+        <ul class="footer-links">
+          <li><a href="#services">Služby</a></li>
+          <li><a href="#why">Proč my</a></li>
+          <li><a href="#about">O nás</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-head">Kontakt</div>
+        <ul class="footer-links">
+          <li><a href="tel:+420123456789">+420 123 456 789</a></li>
+          <li><a href="mailto:info@fixplace.cz">info@fixplace.cz</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=V%C3%A1clavsk%C3%A9+n%C3%A1m%C4%9Bst%C3%AD+1,+Praha+1" target="_blank" rel="noreferrer">Václavské náměstí 1, Praha 1</a></li>
+          <li><a href="#contact">Po–Pá: 8:00–18:00, So: 9:00–14:00</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 FixPlace. Všechna práva vyhrazena.</span>
+      <span>Opravujeme elektroniku s péčí a poctivostí.</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/navigation.js" defer></script>
+  <script src="assets/js/animations.js" defer></script>
+  <script src="assets/js/form.js" defer></script>
+</body>
+</html>
