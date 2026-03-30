@@ -1,4 +1,16 @@
 @media (max-width: 960px) {
+  nav {
+    width: calc(100% - 30px);
+  }
+
+  .nav-links {
+    gap: 0.15rem;
+  }
+
+  .nav-links a {
+    padding: 10px 13px;
+  }
+
   .hero-inner {
     grid-template-columns: 1fr;
   }
@@ -44,7 +56,14 @@
   }
 
   nav {
-    padding: 0 20px;
+    top: 12px;
+    width: calc(100% - 20px);
+    height: 64px;
+    padding: 0 14px 0 20px;
+  }
+
+  .nav-logo {
+    font-size: 1.18rem;
   }
 
   .nav-links {
@@ -53,6 +72,11 @@
 
   .hamburger {
     display: flex;
+  }
+
+  .mobile-menu {
+    top: 84px;
+    width: calc(100% - 20px);
   }
 
   .services-grid,
