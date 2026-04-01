@@ -11,6 +11,7 @@ const requiredFields = [
 
 const readValue = (value) => (typeof value === "string" ? value.trim() : "");
 const readEnv = (name) => readValue(process.env[name]);
+const isValidEmail = (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
 
 const escapeHtml = (value) =>
   value
@@ -43,12 +44,23 @@ module.exports = async (req, res) => {
   const smtpPort = Number(readEnv("SMTP_PORT") || 465);
   const smtpUser = readEnv("SMTP_USER");
   const rawSmtpPass = readEnv("SMTP_PASS");
-  const contactInbox = readEnv("CONTACT_INBOX") || "petahecik@gmail.com";
+  const contactInbox = readEnv("CONTACT_INBOX") || "witryxak@gmail.com";
   const isGmail = smtpHost === "smtp.gmail.com" || smtpUser.endsWith("@gmail.com");
   const smtpPass = isGmail ? rawSmtpPass.replace(/\s+/g, "") : rawSmtpPass;
 
   if (!smtpHost || !smtpUser || !smtpPass) {
     res.status(500).end(JSON.stringify({ ok: false, error: "Server email neni nastaveny." }));
+    return;
+  }
+
+  if (!isValidEmail(smtpUser) || !isValidEmail(contactInbox)) {
+    res.status(500).end(
+      JSON.stringify({
+        ok: false,
+        error: "SMTP_USER nebo CONTACT_INBOX nema platny email format. Ve Vercelu zadej cistou adresu bez uvozovek.",
+        code: "EINVALID_EMAIL_CONFIG",
+      })
+    );
     return;
   }
 
@@ -123,6 +135,8 @@ module.exports = async (req, res) => {
 
     if (errorCode === "EAUTH" || /Invalid login|Username and Password not accepted|Missing credentials/i.test(errorMessage)) {
       publicError = "SMTP prihlaseni selhalo. Zkontroluj SMTP_USER a Gmail App Password.";
+    } else if (errorCode === "EENVELOPE") {
+      publicError = "Neplatna adresa v SMTP_USER nebo CONTACT_INBOX. Zadej ve Vercelu cisty email bez uvozovek a bez mezer navic.";
     } else if (/Application-specific password required|534-5\\.7\\.9/i.test(errorMessage)) {
       publicError = "Google vyzaduje App Password. Pouzij 16mistne heslo aplikace, ne bezne heslo do Gmailu.";
     } else if (/Please log in via your web browser|534-5\\.7\\.14|suspicious/i.test(errorMessage)) {
