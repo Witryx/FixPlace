@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:FILL@1&icon_names=battery_charging_full,coffee_maker,desktop_windows,devices_other,forum,history,laptop_mac,manage_search,microwave,smartphone,support_agent,tablet_mac,tv,verified,watch&display=block" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/base.css" />
   <link rel="stylesheet" href="assets/css/layout.css" />
   <link rel="stylesheet" href="assets/css/sections.css" />
@@ -39,7 +40,7 @@
     <section id="hero">
       <div class="hero-inner">
         <div class="hero-left">
-          <div class="hero-breadcrumb">Opravna elektroniky · Praha</div>
+          <div class="hero-breadcrumb">Opravna elektroniky · Ústí nad Labem</div>
 
           <h1 class="hero-title">
             Rychlá &amp; spolehlivá<br />
@@ -60,12 +61,8 @@
 
           <div class="hero-meta">
             <div>
-              <div class="hero-stat-num">500<em>+</em></div>
+              <div class="hero-stat-num">400<em>+</em></div>
               <div class="hero-stat-label">opravených zařízení</div>
-            </div>
-            <div>
-              <div class="hero-stat-num">4,9<em>★</em></div>
-              <div class="hero-stat-label">hodnocení zákazníků</div>
             </div>
             <div>
               <div class="hero-stat-num">24<em>h</em></div>
@@ -77,31 +74,39 @@
         <div class="hero-right">
           <div class="hero-card-group">
             <div class="hero-info-card">
-              <div class="hic-icon">📱</div>
+              <div class="hic-icon">
+                <span class="material-symbols-rounded" aria-hidden="true">smartphone</span>
+              </div>
               <div>
-                <div class="hic-title">Rozbité displeje</div>
-                <div class="hic-sub">Výměna displeje do 2 hodin</div>
+                <div class="hic-title">Prasklé displeje</div>
+                <div class="hic-sub">U nejběžnějších modelů často hotovo ještě ten den</div>
               </div>
             </div>
             <div class="hero-info-card">
-              <div class="hic-icon">🔋</div>
+              <div class="hic-icon">
+                <span class="material-symbols-rounded" aria-hidden="true">battery_charging_full</span>
+              </div>
               <div>
-                <div class="hic-title">Výměna baterií</div>
-                <div class="hic-sub">Všechny značky a modely</div>
+                <div class="hic-title">Slabá nebo nafouklá baterie</div>
+                <div class="hic-sub">Výměna pro telefony, tablety i vybrané notebooky</div>
               </div>
             </div>
             <div class="hero-info-card">
-              <div class="hic-icon">💻</div>
+              <div class="hic-icon">
+                <span class="material-symbols-rounded" aria-hidden="true">laptop_mac</span>
+              </div>
               <div>
-                <div class="hic-title">Oprava notebooků</div>
-                <div class="hic-sub">Diagnostika zdarma</div>
+                <div class="hic-title">Notebooky bez výkonu</div>
+                <div class="hic-sub">Čištění, SSD upgrade i řešení přehřívání bez zbytečných výměn</div>
               </div>
             </div>
             <div class="hero-info-card">
-              <div class="hic-icon">🛡️</div>
+              <div class="hic-icon">
+                <span class="material-symbols-rounded" aria-hidden="true">forum</span>
+              </div>
               <div>
-                <div class="hic-title">Záruka na opravy</div>
-                <div class="hic-sub">90 dní na díly i práci</div>
+                <div class="hic-title">Rychlé posouzení závady</div>
+                <div class="hic-sub">Pošlete model a problém, ozveme se, co má smysl opravovat</div>
               </div>
             </div>
           </div>
@@ -116,7 +121,7 @@
           <div>
             <div class="section-tag">Naše služby</div>
             <h2 class="section-title">Co opravujeme</h2>
-            <p class="section-desc">Specializujeme se na opravy veškeré běžné elektroniky — od telefonů až po televizory.</p>
+            <p class="section-desc">Specializujeme se na opravy běžné elektroniky i vybraných domácích spotřebičů — od telefonů až po televizory, mikrovlnky nebo kávovary.</p>
           </div>
           <a href="#contact" class="btn btn-solid services-cta">Poptat opravu</a>
         </div>
@@ -124,119 +129,225 @@
 
       <div class="services-grid">
         <div class="service-card reveal">
-          <span class="svc-icon">📱</span>
+          <div class="svc-top">
+            <div class="svc-icon-wrap">
+              <span class="material-symbols-rounded svc-icon" aria-hidden="true">smartphone</span>
+            </div>
+            <div class="svc-eyebrow">Apple i Android</div>
+          </div>
           <div class="svc-name">Mobilní telefony</div>
           <div class="svc-desc">Výměna displeje, baterie, nabíjecího konektoru. Oprava po pádu do vody. Všechny značky — Samsung, iPhone, Xiaomi a další.</div>
-          <div class="svc-tag">Oprava do 2 hodin</div>
+          <div class="svc-footer">
+            <div class="svc-tag">Oprava do 24 hodin</div>
+          </div>
         </div>
         <div class="service-card reveal">
-          <span class="svc-icon">⌚</span>
+          <div class="svc-top">
+            <div class="svc-icon-wrap">
+              <span class="material-symbols-rounded svc-icon" aria-hidden="true">watch</span>
+            </div>
+            <div class="svc-eyebrow">Precizní opravy</div>
+          </div>
           <div class="svc-name">Chytré hodinky</div>
           <div class="svc-desc">Výměna displeje, oprava tlačítek a nabíjení. Apple Watch, Samsung Galaxy Watch, Garmin a další modely.</div>
-          <div class="svc-tag">Všechny značky</div>
+          <div class="svc-footer">
+            <div class="svc-tag">Všechny značky</div>
+          </div>
         </div>
         <div class="service-card reveal">
-          <span class="svc-icon">📟</span>
+          <div class="svc-top">
+            <div class="svc-icon-wrap">
+              <span class="material-symbols-rounded svc-icon" aria-hidden="true">tablet_mac</span>
+            </div>
+            <div class="svc-eyebrow">Displeje a porty</div>
+          </div>
           <div class="svc-name">Tablety</div>
           <div class="svc-desc">Oprava a výměna displeje, digitizéru, baterie či nabíjecího portu. iPady i Android tablety.</div>
-          <div class="svc-tag">iPad i Android</div>
+          <div class="svc-footer">
+            <div class="svc-tag">iPad i Android</div>
+          </div>
         </div>
         <div class="service-card reveal">
-          <span class="svc-icon">💻</span>
+          <div class="svc-top">
+            <div class="svc-icon-wrap">
+              <span class="material-symbols-rounded svc-icon" aria-hidden="true">laptop_mac</span>
+            </div>
+            <div class="svc-eyebrow">Opravy a upgrade</div>
+          </div>
           <div class="svc-name">Notebooky</div>
           <div class="svc-desc">Výměna klávesnice, displeje, SSD a RAM. Čištění chladiče, reinstalace systému. Mac i Windows.</div>
-          <div class="svc-tag">Mac i Windows</div>
+          <div class="svc-footer">
+            <div class="svc-tag">Mac i Windows</div>
+          </div>
         </div>
         <div class="service-card reveal">
-          <span class="svc-icon">🖥️</span>
+          <div class="svc-top">
+            <div class="svc-icon-wrap">
+              <span class="material-symbols-rounded svc-icon" aria-hidden="true">desktop_windows</span>
+            </div>
+            <div class="svc-eyebrow">Opravy a upgrade</div>
+          </div>
           <div class="svc-name">Stolní počítače</div>
           <div class="svc-desc">Diagnostika hardware, výměna komponent, upgrade grafické karty nebo procesoru, čištění a servis.</div>
-          <div class="svc-tag">PC i Mac</div>
+          <div class="svc-footer">
+            <div class="svc-tag">Windows PC</div>
+          </div>
         </div>
         <div class="service-card reveal">
-          <span class="svc-icon">📺</span>
+          <div class="svc-top">
+            <div class="svc-icon-wrap">
+              <span class="material-symbols-rounded svc-icon" aria-hidden="true">tv</span>
+            </div>
+            <div class="svc-eyebrow">Domácí elektronika</div>
+          </div>
           <div class="svc-name">Televizory</div>
           <div class="svc-desc">Oprava LED i LCD panelů, napájecích desek, HDMI portů a problémů se softwarem Smart TV.</div>
-          <div class="svc-tag">Všechny typy</div>
+          <div class="svc-footer">
+            <div class="svc-tag">Všechny typy</div>
+          </div>
+        </div>
+        <div class="service-card reveal">
+          <div class="svc-top">
+            <div class="svc-icon-wrap">
+              <span class="material-symbols-rounded svc-icon" aria-hidden="true">microwave</span>
+            </div>
+            <div class="svc-eyebrow">Kuchyňské spotřebiče</div>
+          </div>
+          <div class="svc-name">Mikrovlnné trouby</div>
+          <div class="svc-desc">Řešíme nefunkční ohřev, tlačítka, displej, dvířka i výpadky napájení. Posoudíme stav zařízení a navrhneme, zda má oprava smysl.</div>
+          <div class="svc-footer">
+            <div class="svc-tag">Velké i malé</div>
+          </div>
+        </div>
+        <div class="service-card reveal">
+          <div class="svc-top">
+            <div class="svc-icon-wrap">
+              <span class="material-symbols-rounded svc-icon" aria-hidden="true">coffee_maker</span>
+            </div>
+            <div class="svc-eyebrow">Espresso i automat</div>
+          </div>
+          <div class="svc-name">Kávovary</div>
+          <div class="svc-desc">Pomůžeme s poruchami čerpadla, mlýnku, ohřevu, napěňovače i elektroniky. Servisujeme domácí modely i vybrané kancelářské stroje.</div>
+          <div class="svc-footer">
+            <div class="svc-tag">Automatické</div>
+          </div>
+        </div>
+        <div class="service-card reveal">
+          <div class="svc-top">
+            <div class="svc-icon-wrap">
+              <span class="material-symbols-rounded svc-icon" aria-hidden="true">devices_other</span>
+            </div>
+            <div class="svc-eyebrow">Na dotaz</div>
+          </div>
+          <div class="svc-name">Ostatní</div>
+          <div class="svc-desc">Máte jiné zařízení nebo spotřebič? Napište nám značku, model a popis závady. Rychle vám dáme vědět, jestli opravu zvládneme a jaký bude další postup.</div>
+          <div class="svc-footer">
+            <a href="#contactForm" class="svc-tag svc-tag-link">Zkuste se ozvat</a>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- PROČ MY -->
     <section id="why">
-      <div class="reveal">
-        <div class="section-tag">Proč FixPlace</div>
-        <h2 class="section-title">Jednoduše proto, že nám záleží na kvalitě</h2>
+      <div class="why-top reveal">
+        <div class="why-intro">
+          <div class="section-tag">Proč FixPlace</div>
+          <h2 class="section-title">Servis, kde víte, co má smysl opravit a co už ne</h2>
+          <p class="section-desc">Nejsme anonymní sběrna zařízení. Nejdřív zjistíme skutečný problém, potom navrhneme rozumné řešení, cenu i další postup.</p>
+        </div>
       </div>
 
       <div class="why-grid">
-        <div class="why-reasons reveal">
-          <div class="why-row">
-            <div class="why-num">01</div>
-            <div>
-              <div class="why-row-title">Rychlá oprava</div>
-              <div class="why-row-desc">Většinu oprav zvládáme do 24 hodin. Jednodušší závady — například výměna displeje — opravíme za 1–2 hodiny na počkání.</div>
+        <div class="why-cards reveal">
+          <article class="why-card why-card-accent">
+            <div class="why-card-top">
+              <div class="why-card-icon-wrap">
+                <span class="material-symbols-rounded why-card-icon" aria-hidden="true">history</span>
+              </div>
+              <div class="why-card-num">01</div>
             </div>
-          </div>
-          <div class="why-row">
-            <div class="why-num">02</div>
-            <div>
-              <div class="why-row-title">Zkušení technici</div>
-              <div class="why-row-desc">Naši technici mají zkušenosti se stovkami různých modelů zařízení. Váš přístroj je v dobrých rukou.</div>
+            <div class="why-card-title">Rychlá reakce a realistický termín</div>
+            <div class="why-card-desc">U běžných závad se ozýváme rychle a hned na začátku řekneme, co je reálně hotové za pár hodin a co už bude chtít víc času.</div>
+          </article>
+
+          <article class="why-card">
+            <div class="why-card-top">
+              <div class="why-card-icon-wrap">
+                <span class="material-symbols-rounded why-card-icon" aria-hidden="true">manage_search</span>
+              </div>
+              <div class="why-card-num">02</div>
             </div>
-          </div>
-          <div class="why-row">
-            <div class="why-num">03</div>
-            <div>
-              <div class="why-row-title">Jasné a férové ceny</div>
-              <div class="why-row-desc">Diagnostika zdarma. Cenu opravy sdělíme předem — žádné skryté poplatky ani překvapení na konci.</div>
+            <div class="why-card-title">Nejdřív hledáme příčinu</div>
+            <div class="why-card-desc">Nejedeme styl „zkusíme vyměnit půlku zařízení“. Nejdřív ověříme problém a až potom doporučíme konkrétní zásah.</div>
+          </article>
+
+          <article class="why-card">
+            <div class="why-card-top">
+              <div class="why-card-icon-wrap">
+                <span class="material-symbols-rounded why-card-icon" aria-hidden="true">verified</span>
+              </div>
+              <div class="why-card-num">03</div>
             </div>
-          </div>
-          <div class="why-row">
-            <div class="why-num">04</div>
-            <div>
-              <div class="why-row-title">Individuální přístup</div>
-              <div class="why-row-desc">Ke každému zákazníkovi přistupujeme osobně. Závadu vysvětlíme srozumitelně a navrhneme nejlepší řešení.</div>
+            <div class="why-card-title">Cena a postup předem</div>
+            <div class="why-card-desc">Diagnostika zdarma, jasná domluva a žádné překvapení na konci. Než cokoliv uděláme, víte, co se bude řešit.</div>
+          </article>
+
+          <article class="why-card">
+            <div class="why-card-top">
+              <div class="why-card-icon-wrap">
+                <span class="material-symbols-rounded why-card-icon" aria-hidden="true">support_agent</span>
+              </div>
+              <div class="why-card-num">04</div>
             </div>
-          </div>
-          <div class="why-row">
-            <div class="why-num">05</div>
-            <div>
-              <div class="why-row-title">Záruka 90 dní</div>
-              <div class="why-row-desc">Na každou opravu poskytujeme 90denní záruku na použité díly i provedenou práci. Opravíme bez příplatku, pokud by se problém opakoval.</div>
+            <div class="why-card-title">Normální komunikace bez omáčky</div>
+            <div class="why-card-desc">Závadu vysvětlíme lidsky. Nepotřebujete znát servisní slovník, abyste rozuměli, co se s vaším zařízením děje.</div>
+          </article>
+
+          <article class="why-card why-card-wide">
+            <div class="why-card-top">
+              <div class="why-card-icon-wrap">
+                <span class="material-symbols-rounded why-card-icon" aria-hidden="true">forum</span>
+              </div>
+              <div class="why-card-num">05</div>
             </div>
-          </div>
+            <div class="why-card-title">Opravu doporučíme jen tehdy, když opravdu dává smysl</div>
+            <div class="why-card-desc">Když je zařízení na hraně životnosti nebo by oprava stála nesmysl, řekneme to narovinu. Cílem není prodat zásah za každou cenu, ale navrhnout nejlepší řešení pro vás.</div>
+          </article>
         </div>
 
         <div class="why-aside reveal">
-          <div class="aside-stats">
-            <div class="aside-stat">
-              <div class="aside-stat-num">500<em>+</em></div>
-              <div class="aside-stat-label">opravených zařízení</div>
+          <div class="why-banner">
+            <div class="why-banner-label">Bez zbytečných řečí</div>
+            <div class="why-banner-text">Když oprava dává smysl, uděláme ji rychle a poctivě. Když ne, řekneme to rovnou a nebudeme vás tlačit do nesmyslné investice.</div>
+          </div>
+
+          <div class="why-proof">
+            <div class="why-proof-kicker">FixPlace v číslech</div>
+            <div class="why-proof-title">Poctivý servis se pozná podle výsledku, ne podle slibů.</div>
+
+            <div class="why-stats">
+              <div class="why-stat">
+                <div class="why-stat-num">400<em>+</em></div>
+                <div class="why-stat-label">opravených zařízení</div>
+              </div>
+              <div class="why-stat">
+                <div class="why-stat-num">24<em>h</em></div>
+                <div class="why-stat-label">běžná doba u standardních oprav</div>
+              </div>
+              <div class="why-stat">
+                <div class="why-stat-num">Od 2020</div>
+                <div class="why-stat-label">praxe v opravách elektroniky</div>
+              </div>
             </div>
-            <div class="aside-stat">
-              <div class="aside-stat-num">4,9<em>★</em></div>
-              <div class="aside-stat-label">průměrné hodnocení</div>
-            </div>
           </div>
 
-          <div class="aside-review">
-            <div class="aside-stars">★ ★ ★ ★ ★</div>
-            <div class="aside-review-text">„Přinesla jsem rozbitý iPhone a opravili mi ho za dvě hodiny. Cena odpovídala tomu, co říkali předem. Doporučuji každému.“</div>
-            <div class="aside-reviewer">— Jana K., spokojená zákaznice</div>
-          </div>
-
-          <div class="aside-review aside-review-alt">
-            <div class="aside-stars">★ ★ ★ ★ ★</div>
-            <div class="aside-review-text">„Opravili mi notebook, který jinde označili za neopravitelný. Skvělá práce a příjemný přístup.“</div>
-            <div class="aside-reviewer">— Tomáš M., spokojený zákazník</div>
-          </div>
-
-          <div class="aside-badge">
-            <div class="aside-badge-icon">🛡️</div>
-            <div>
-              <div class="aside-badge-title">Záruka na opravu 90 dní</div>
-              <div class="aside-badge-sub">Na díly i práci, bez výjimek</div>
+          <div class="why-promise">
+            <div class="why-promise-title">Co od nás čekat</div>
+            <div class="why-promise-list">
+              <div class="why-promise-item"><span class="why-promise-dot"></span><span>Jasné vysvětlení problému bez technických omáček</span></div>
+              <div class="why-promise-item"><span class="why-promise-dot"></span><span>Rozumné doporučení podle ceny, stavu a životnosti zařízení</span></div>
+              <div class="why-promise-item"><span class="why-promise-dot"></span><span>Komunikaci předem, ne překvapení až při převzetí</span></div>
             </div>
           </div>
         </div>
@@ -246,90 +357,93 @@
     <!-- O NÁS -->
     <section id="about">
       <div class="about-grid">
-        <div class="reveal">
-          <div class="section-tag">O nás</div>
-          <h2 class="section-title">Místní opravna, na které záleží</h2>
-          <p class="about-body about-body-intro">
-            FixPlace vznikl z přesvědčení, že oprava elektroniky má být dostupná, poctivá a rychlá. Začínali jsme jako malá dílna a dnes obsluhujeme stovky zákazníků, kteří se k nám rádi vracejí.
-          </p>
-          <p class="about-body">
-            Každé zařízení opravujeme pečlivě a s respektem k zákazníkově důvěře. Nepoužíváme zbytečné díly ani nepřeháníme ceny — děláme jen to, co je skutečně potřeba.
-          </p>
-
-          <div class="about-pillars">
-            <div class="pillar">
-              <div class="pillar-icon">🔍</div>
-              <div class="pillar-title">Přesná diagnostika</div>
-              <div class="pillar-desc">Hledáme příčinu, ne jen příznaky.</div>
-            </div>
-            <div class="pillar">
-              <div class="pillar-icon">🔧</div>
-              <div class="pillar-title">Kvalitní díly</div>
-              <div class="pillar-desc">Pouze prověřené náhradní díly.</div>
-            </div>
-            <div class="pillar">
-              <div class="pillar-icon">🤝</div>
-              <div class="pillar-title">Zákazník na prvním místě</div>
-              <div class="pillar-desc">Vaše spokojenost je naší prioritou.</div>
-            </div>
-            <div class="pillar">
-              <div class="pillar-icon">📅</div>
-              <div class="pillar-title">Praxe od roku 2020</div>
-              <div class="pillar-desc">Elektroniku opravujeme už od roku 2020.</div>
-            </div>
+        <div class="about-stage reveal">
+          <div class="about-story">
+            <div class="section-tag">O nás</div>
+            <h2 class="section-title">Opravujeme věci, které má smysl zachránit</h2>
+            <p class="about-lead">
+              FixPlace je lokální servis pro lidi, kteří chtějí rychlou a poctivou opravu bez zbytečných řečí okolo.
+            </p>
+            <p class="about-body">
+              Nejdřív hledáme skutečnou příčinu problému a teprve potom navrhujeme řešení. Opravujeme telefony, notebooky, tablety i další elektroniku, kde dává smysl zařízení vrátit zpátky do provozu.
+            </p>
+            <p class="about-body">
+              Neprodáváme výměny za každou cenu. Řekneme vám narovinu, co se vyplatí řešit, co bude oprava stát a kdy už je lepší do zařízení další peníze nedávat.
+            </p>
           </div>
         </div>
 
-        <div class="reveal" id="skillsBlock">
-          <div class="about-card-title">Úspěšnost oprav podle kategorie</div>
-          <div class="about-skills">
-            <div class="skill-item">
-              <div class="skill-head"><span>Mobilní telefony</span><span>98 %</span></div>
-              <div class="skill-track"><div class="skill-fill" data-progress="98"></div></div>
+        <div class="about-principles reveal">
+          <article class="about-principle about-principle-accent">
+            <div class="about-principle-top">
+              <div class="about-principle-icon-wrap">
+                <span class="material-symbols-rounded about-principle-icon" aria-hidden="true">manage_search</span>
+              </div>
+              <div class="about-principle-num">01</div>
             </div>
-            <div class="skill-item">
-              <div class="skill-head"><span>Tablety</span><span>97 %</span></div>
-              <div class="skill-track"><div class="skill-fill" data-progress="97"></div></div>
+            <div class="about-principle-title">Nejdřív diagnóza, pak zásah</div>
+            <div class="about-principle-desc">Neopravujeme naslepo. Nejprve ověříme, kde je skutečný problém, a až potom navrhujeme konkrétní postup.</div>
+          </article>
+
+          <article class="about-principle">
+            <div class="about-principle-top">
+              <div class="about-principle-icon-wrap">
+                <span class="material-symbols-rounded about-principle-icon" aria-hidden="true">verified</span>
+              </div>
+              <div class="about-principle-num">02</div>
             </div>
-            <div class="skill-item">
-              <div class="skill-head"><span>Chytré hodinky</span><span>96 %</span></div>
-              <div class="skill-track"><div class="skill-fill" data-progress="96"></div></div>
+            <div class="about-principle-title">Komponenty, které dávají smysl</div>
+            <div class="about-principle-desc">Volíme díly podle kvality, dostupnosti i ceny. Cílem není udělat co nejdražší opravu, ale rozumně funkční výsledek.</div>
+          </article>
+
+          <article class="about-principle">
+            <div class="about-principle-top">
+              <div class="about-principle-icon-wrap">
+                <span class="material-symbols-rounded about-principle-icon" aria-hidden="true">support_agent</span>
+              </div>
+              <div class="about-principle-num">03</div>
             </div>
-            <div class="skill-item">
-              <div class="skill-head"><span>Notebooky</span><span>95 %</span></div>
-              <div class="skill-track"><div class="skill-fill" data-progress="95"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-head"><span>Stolní počítače</span><span>93 %</span></div>
-              <div class="skill-track"><div class="skill-fill" data-progress="93"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-head"><span>Televizory</span><span>90 %</span></div>
-              <div class="skill-track"><div class="skill-fill" data-progress="90"></div></div>
-            </div>
+            <div class="about-principle-title">Jasná domluva od začátku</div>
+            <div class="about-principle-desc">Předem víte, co budeme řešit, jaký je předpoklad ceny a kdy vám zařízení vrátíme zpátky do ruky.</div>
+          </article>
+        </div>
+
+        <div class="about-facts reveal">
+          <div class="about-fact">
+            <div class="about-fact-value">Od 2020</div>
+            <div class="about-fact-label">praxe v opravách elektroniky</div>
           </div>
-          <div class="skills-note">Údaje vycházejí z dokončených oprav za posledních 12 měsíců.</div>
+          <div class="about-fact">
+            <div class="about-fact-value">Lokálně</div>
+            <div class="about-fact-label">servis bez přeposílání na jiné pobočky</div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- KONTAKT -->
     <section id="contact">
-      <div class="reveal">
-        <div class="section-tag">Kontakt</div>
-        <h2 class="section-title">Přijďte nás navštívit nebo nám napište</h2>
-        <p class="section-desc">Rádi si vaše zařízení prohlédneme a navrhneme nejlepší řešení. Diagnostika je zdarma.</p>
+      <div class="contact-top reveal">
+        <div class="contact-overview">
+          <div class="section-tag">Kontakt</div>
+          <h2 class="section-title">Napište nám</h2>
+          <p class="section-desc">Rádi si vaše zařízení prohlédneme a navrhneme nejlepší řešení. Diagnostika je zdarma.</p>
+          <div class="contact-quickfacts">
+            <span>Diagnostika zdarma</span>
+            <span>Odpověď do pár hodin</span>
+          </div>
+        </div>
       </div>
 
       <div class="contact-grid">
         <div class="contact-details reveal">
-          <a href="tel:+420123456789" class="contact-item">
+          <a href="tel:+420607170407" class="contact-item">
             <div class="ci-icon">
               <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.7A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.15a16 16 0 006.29 6.29l1.42-1.42a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg>
             </div>
             <div>
               <div class="ci-label">Telefon</div>
-              <div class="ci-value">+420 123 456 789</div>
+              <div class="ci-value">+420 607 170 407</div>
             </div>
           </a>
 
@@ -342,75 +456,94 @@
               <div class="ci-value">info@fixplace.cz</div>
             </div>
           </a>
-
-          <a href="https://www.google.com/maps/search/?api=1&amp;query=V%C3%A1clavsk%C3%A9+n%C3%A1m%C4%9Bst%C3%AD+1,+Praha+1" target="_blank" rel="noreferrer" class="contact-item">
-            <div class="ci-icon">
-              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-            </div>
-            <div>
-              <div class="ci-label">Adresa</div>
-              <div class="ci-value">Václavské náměstí 1, Praha 1</div>
-            </div>
-          </a>
-
-          <div class="hours-box">
-            <div class="hours-box-title">Otevírací doba</div>
-            <div class="hours-row"><span class="day">Pondělí – Pátek</span><span class="time-open">8:00 – 18:00</span></div>
-            <div class="hours-row"><span class="day">Sobota</span><span class="time-open">9:00 – 14:00</span></div>
-            <div class="hours-row"><span class="day">Neděle</span><span class="time-closed">Zavřeno</span></div>
-          </div>
         </div>
 
-        <div class="contact-form reveal">
-          <form id="contactForm" class="contact-form-shell" novalidate>
-            <div class="form-title">Poptávkový formulář</div>
-            <div class="form-subtitle">Vyplňte formulář a ozveme se vám do několika hodin.</div>
+        <div class="contact-panel reveal">
+          <div class="contact-panel-side">
+            <div class="contact-panel-kicker">Jak to probíhá</div>
+            <div class="contact-panel-title">Vyplňte pár údajů a my navrhneme další postup.</div>
+            <div class="contact-panel-text">Čím přesněji popíšete zařízení a závadu, tím rychleji vám řekneme, jestli oprava dává smysl a co bude následovat.</div>
 
-            <div class="form-row-2">
-              <div class="form-group">
-                <label class="form-label" for="firstName">Jméno</label>
-                <input id="firstName" name="firstName" type="text" class="form-control" placeholder="Jan" autocomplete="given-name" required />
+            <div class="contact-process">
+              <div class="contact-step">
+                <div class="contact-step-index">01</div>
+                <div class="contact-step-copy">
+                  <div class="contact-step-title">Pošlete model a problém</div>
+                  <div class="contact-step-desc">Stačí základní kontakt, typ zařízení a krátký popis závady.</div>
+                </div>
+              </div>
+
+              <div class="contact-step">
+                <div class="contact-step-index">02</div>
+                <div class="contact-step-copy">
+                  <div class="contact-step-title">Ozveme se s posouzením</div>
+                  <div class="contact-step-desc">Řekneme vám, jestli má oprava smysl a jaký bude další krok.</div>
+                </div>
+              </div>
+
+              <div class="contact-step">
+                <div class="contact-step-index">03</div>
+                <div class="contact-step-copy">
+                  <div class="contact-step-title">Domluvíme převzetí</div>
+                  <div class="contact-step-desc">Zařízení přinesete osobně, nebo se domluvíme na vhodném postupu.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form">
+            <form id="contactForm" class="contact-form-shell" novalidate>
+              <div class="form-title">Poptávkový formulář</div>
+              <div class="form-subtitle">Vyplňte formulář a ozveme se vám do několika hodin.</div>
+
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label class="form-label" for="firstName">Jméno</label>
+                  <input id="firstName" name="firstName" type="text" class="form-control" placeholder="Jan" autocomplete="given-name" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="lastName">Příjmení</label>
+                  <input id="lastName" name="lastName" type="text" class="form-control" placeholder="Novák" autocomplete="family-name" required />
+                </div>
               </div>
               <div class="form-group">
-                <label class="form-label" for="lastName">Příjmení</label>
-                <input id="lastName" name="lastName" type="text" class="form-control" placeholder="Novák" autocomplete="family-name" required />
+                <label class="form-label" for="email">E-mail</label>
+                <input id="email" name="email" type="email" class="form-control" placeholder="jan@example.com" autocomplete="email" required />
               </div>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="email">E-mail</label>
-              <input id="email" name="email" type="email" class="form-control" placeholder="jan@example.com" autocomplete="email" required />
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="phone">Telefon</label>
-              <input id="phone" name="phone" type="tel" class="form-control" placeholder="+420 ..." autocomplete="tel" required />
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="deviceType">Typ zařízení</label>
-              <select id="deviceType" name="deviceType" class="form-control" required>
-                <option value="" disabled selected>Vyberte zařízení…</option>
-                <option>Mobilní telefon</option>
-                <option>Chytré hodinky</option>
-                <option>Tablet</option>
-                <option>Notebook</option>
-                <option>Stolní počítač</option>
-                <option>Televizor</option>
-                <option>Jiné</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="issueDescription">Popis závady</label>
-              <textarea id="issueDescription" name="issueDescription" class="form-control" placeholder="Popište, co se s vaším zařízením děje. Čím více informací uvedete, tím přesněji vám pomůžeme." required></textarea>
-            </div>
-            <button type="submit" class="btn btn-solid form-submit-btn">
-              Odeslat poptávku
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-            </button>
-          </form>
+              <div class="form-group">
+                <label class="form-label" for="phone">Telefon</label>
+                <input id="phone" name="phone" type="tel" class="form-control" placeholder="+420 ..." autocomplete="tel" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="deviceType">Typ zařízení</label>
+                <select id="deviceType" name="deviceType" class="form-control" required>
+                  <option value="" disabled selected>Vyberte zařízení…</option>
+                  <option>Mobilní telefon</option>
+                  <option>Chytré hodinky</option>
+                  <option>Tablet</option>
+                  <option>Notebook</option>
+                  <option>Stolní počítač</option>
+                  <option>Televizor</option>
+                  <option>Mikrovlnná trouba</option>
+                  <option>Kávovar</option>
+                  <option>Ostatní / na dotaz</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="issueDescription">Popis závady</label>
+                <textarea id="issueDescription" name="issueDescription" class="form-control" placeholder="Popište, co se s vaším zařízením děje. U ostatních zařízení přidejte i značku a model, ať vám rychle řekneme, jestli opravu zvládneme." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-solid form-submit-btn">
+                Odeslat poptávku
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+            </form>
 
-          <div class="form-success" id="formSuccess" aria-live="polite" tabindex="-1">
-            <div class="form-success-icon">✅</div>
-            <div class="form-success-title">Poptávka odeslána!</div>
-            <div class="form-success-text">Ozveme se vám do několika hodin.<br />Děkujeme za důvěru.</div>
+            <div class="form-success" id="formSuccess" aria-live="polite" tabindex="-1">
+              <div class="form-success-icon">✅</div>
+              <div class="form-success-title">Poptávka odeslána!</div>
+              <div class="form-success-text">Ozveme se vám do několika hodin.<br />Děkujeme za důvěru.</div>
+            </div>
           </div>
         </div>
       </div>
@@ -441,10 +574,8 @@
       <div>
         <div class="footer-col-head">Kontakt</div>
         <ul class="footer-links">
-          <li><a href="tel:+420123456789">+420 123 456 789</a></li>
+          <li><a href="tel:+420607170407">+420 607 170 407</a></li>
           <li><a href="mailto:info@fixplace.cz">info@fixplace.cz</a></li>
-          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=V%C3%A1clavsk%C3%A9+n%C3%A1m%C4%9Bst%C3%AD+1,+Praha+1" target="_blank" rel="noreferrer">Václavské náměstí 1, Praha 1</a></li>
-          <li><a href="#contact">Po–Pá: 8:00–18:00, So: 9:00–14:00</a></li>
         </ul>
       </div>
     </div>

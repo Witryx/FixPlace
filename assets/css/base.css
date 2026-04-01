@@ -62,6 +62,24 @@ a {
   color: inherit;
 }
 
+.material-symbols-rounded {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Material Symbols Rounded";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: 1;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  font-variation-settings: "FILL" 1, "wght" 500, "GRAD" 0, "opsz" 24;
+}
+
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -77,6 +95,10 @@ a {
 
 section {
   padding: 88px 6vw;
+}
+
+section > :first-child {
+  scroll-margin-top: var(--nav-offset, 120px);
 }
 
 .section-tag {
@@ -112,12 +134,14 @@ section {
 .reveal {
   opacity: 0;
   transform: translateY(20px);
+  will-change: opacity, transform;
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+  will-change: auto;
 }
 
 .btn {

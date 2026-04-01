@@ -1,78 +1,43 @@
 (() => {
   const revealItems = Array.from(document.querySelectorAll(".reveal"));
-  const skillsBlock = document.getElementById("skillsBlock");
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  );
 
-  const animateReveal = (element) => {
-    const delayIndex = Number(element.dataset.revealIndex || "0");
+  const animateReveal = (element, order = 0) => {
+    const revealDelay = prefersReducedMotion.matches
+      ? 0
+      : Math.min(order, 3) * 70;
+
     window.setTimeout(() => {
-      element.classList.add("visible");
-    }, delayIndex * 70);
+      window.requestAnimationFrame(() => {
+        element.classList.add("visible");
+      });
+    }, revealDelay);
   };
-
-  const animateSkillBars = () => {
-    if (!skillsBlock) {
-      return;
-    }
-
-    skillsBlock.querySelectorAll(".skill-fill").forEach((bar, index) => {
-      if (bar.dataset.progress) {
-        bar.style.width = `${bar.dataset.progress}%`;
-      }
-
-      window.setTimeout(() => {
-        bar.classList.add("animate");
-      }, index * 100);
-    });
-  };
-
-  revealItems.forEach((item, index) => {
-    item.dataset.revealIndex = String(index);
-  });
 
   if (!("IntersectionObserver" in window)) {
-    revealItems.forEach((item) => animateReveal(item));
-    animateSkillBars();
+    revealItems.forEach((item, index) => animateReveal(item, index));
     return;
   }
 
   const revealObserver = new IntersectionObserver(
     (entries, observer) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) {
-          return;
-        }
-
-        animateReveal(entry.target);
-        observer.unobserve(entry.target);
-      });
+      entries
+        .filter((entry) => entry.isIntersecting)
+        .sort(
+          (firstEntry, secondEntry) =>
+            firstEntry.boundingClientRect.top - secondEntry.boundingClientRect.top
+        )
+        .forEach((entry, index) => {
+          animateReveal(entry.target, index);
+          observer.unobserve(entry.target);
+        });
     },
-    { threshold: 0.12 }
+    { threshold: 0.05, rootMargin: "0px 0px 10% 0px" }
   );
 
   revealItems.forEach((item) => {
     revealObserver.observe(item);
   });
-
-  if (!skillsBlock) {
-    return;
-  }
-
-  let skillsAnimated = false;
-
-  const skillsObserver = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting || skillsAnimated) {
-          return;
-        }
-
-        skillsAnimated = true;
-        animateSkillBars();
-        observer.unobserve(entry.target);
-      });
-    },
-    { threshold: 0.3 }
-  );
-
-  skillsObserver.observe(skillsBlock);
 })();
