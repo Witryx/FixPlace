@@ -436,28 +436,6 @@
       </div>
 
       <div class="contact-grid">
-        <div class="contact-details reveal">
-          <a href="tel:+420607170407" class="contact-item">
-            <div class="ci-icon">
-              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.7A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.15a16 16 0 006.29 6.29l1.42-1.42a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg>
-            </div>
-            <div>
-              <div class="ci-label">Telefon</div>
-              <div class="ci-value">+420 607 170 407</div>
-            </div>
-          </a>
-
-          <a href="mailto:info@fixplace.cz" class="contact-item">
-            <div class="ci-icon">
-              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-            </div>
-            <div>
-              <div class="ci-label">E-mail</div>
-              <div class="ci-value">info@fixplace.cz</div>
-            </div>
-          </a>
-        </div>
-
         <div class="contact-panel reveal">
           <div class="contact-panel-side">
             <div class="contact-panel-kicker">Jak to probíhá</div>
@@ -492,7 +470,14 @@
           </div>
 
           <div class="contact-form">
-            <form id="contactForm" class="contact-form-shell" novalidate>
+            <form
+              id="contactForm"
+              class="contact-form-shell"
+              method="POST"
+              action="/api/contact"
+              data-contact-endpoint="/api/contact"
+              novalidate
+            >
               <div class="form-title">Poptávkový formulář</div>
               <div class="form-subtitle">Vyplňte formulář a ozveme se vám do několika hodin.</div>
 
@@ -537,6 +522,7 @@
                 Odeslat poptávku
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
               </button>
+              <div class="form-feedback" id="formFeedback" aria-live="polite" hidden></div>
             </form>
 
             <div class="form-success" id="formSuccess" aria-live="polite" tabindex="-1">
@@ -575,7 +561,6 @@
         <div class="footer-col-head">Kontakt</div>
         <ul class="footer-links">
           <li><a href="tel:+420607170407">+420 607 170 407</a></li>
-          <li><a href="mailto:info@fixplace.cz">info@fixplace.cz</a></li>
         </ul>
       </div>
     </div>

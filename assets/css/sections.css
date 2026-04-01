@@ -943,11 +943,16 @@
 }
 
 .contact-top {
-  max-width: none;
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .contact-overview {
-  max-width: 1180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: none;
 }
 
 .contact-overview .section-title {
@@ -961,6 +966,7 @@
 .contact-quickfacts {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 10px;
   margin-top: 24px;
 }
@@ -988,8 +994,10 @@
 
 .contact-details {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 16px;
+  width: min(760px, 100%);
+  margin: 0 auto;
 }
 
 .contact-item,
@@ -1285,6 +1293,28 @@ textarea.form-control {
   padding: 15px 24px;
   border-radius: 14px;
   box-shadow: 0 16px 28px rgba(29, 95, 168, 0.2);
+}
+
+.form-submit-btn:disabled {
+  cursor: wait;
+  opacity: 0.82;
+  box-shadow: 0 12px 22px rgba(29, 95, 168, 0.16);
+}
+
+.form-honey {
+  display: none !important;
+}
+
+.form-feedback {
+  min-height: 24px;
+  margin-top: 14px;
+  color: var(--text-mid);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.form-feedback[data-state="error"] {
+  color: var(--danger);
 }
 
 .form-success {
