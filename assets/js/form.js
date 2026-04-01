@@ -109,11 +109,12 @@
       successMessage.focus();
     } catch (error) {
       console.error(error);
+      const errorMessage = error instanceof Error ? error.message : "Nepodarilo se odeslat formular.";
 
       if (isLocalPreview) {
         setFeedback("Pres Live Server se API nespusti. Otestuj to pres nasazeny web nebo pres `vercel dev`.", "error");
       } else {
-        setFeedback("Nepodarilo se odeslat formular. Zkuste to prosim znovu.", "error");
+        setFeedback(errorMessage, "error");
       }
     } finally {
       setSubmittingState(false);

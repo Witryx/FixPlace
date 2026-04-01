@@ -10,6 +10,7 @@ const requiredFields = [
 ];
 
 const readValue = (value) => (typeof value === "string" ? value.trim() : "");
+const readEnv = (name) => readValue(process.env[name]);
 
 const escapeHtml = (value) =>
   value
@@ -38,26 +39,38 @@ module.exports = async (req, res) => {
     return;
   }
 
-  const smtpHost = process.env.SMTP_HOST;
-  const smtpPort = Number(process.env.SMTP_PORT || 465);
-  const smtpUser = process.env.SMTP_USER;
-  const smtpPass = process.env.SMTP_PASS;
-  const contactInbox = process.env.CONTACT_INBOX || "petahecik@gmail.com";
+  const smtpHost = readEnv("SMTP_HOST");
+  const smtpPort = Number(readEnv("SMTP_PORT") || 465);
+  const smtpUser = readEnv("SMTP_USER");
+  const rawSmtpPass = readEnv("SMTP_PASS");
+  const contactInbox = readEnv("CONTACT_INBOX") || "petahecik@gmail.com";
+  const isGmail = smtpHost === "smtp.gmail.com" || smtpUser.endsWith("@gmail.com");
+  const smtpPass = isGmail ? rawSmtpPass.replace(/\s+/g, "") : rawSmtpPass;
 
   if (!smtpHost || !smtpUser || !smtpPass) {
     res.status(500).end(JSON.stringify({ ok: false, error: "Server email neni nastaveny." }));
     return;
   }
 
-  const transporter = nodemailer.createTransport({
-    host: smtpHost,
-    port: smtpPort,
-    secure: smtpPort === 465,
-    auth: {
-      user: smtpUser,
-      pass: smtpPass,
-    },
-  });
+  const transportConfig = isGmail
+    ? {
+        service: "gmail",
+        auth: {
+          user: smtpUser,
+          pass: smtpPass,
+        },
+      }
+    : {
+        host: smtpHost,
+        port: smtpPort,
+        secure: smtpPort === 465,
+        auth: {
+          user: smtpUser,
+          pass: smtpPass,
+        },
+      };
+
+  const transporter = nodemailer.createTransport(transportConfig);
 
   const fullName = `${data.firstName} ${data.lastName}`.trim();
   const safeIssue = escapeHtml(data.issueDescription).replace(/\r?\n/g, "<br />");
@@ -88,6 +101,8 @@ module.exports = async (req, res) => {
   `;
 
   try {
+    await transporter.verify();
+
     await transporter.sendMail({
       from: `"FixPlace web" <${smtpUser}>`,
       to: contactInbox,
@@ -100,6 +115,22 @@ module.exports = async (req, res) => {
     res.status(200).end(JSON.stringify({ ok: true }));
   } catch (error) {
     console.error("Contact form send failed:", error);
-    res.status(500).end(JSON.stringify({ ok: false, error: "Email se nepodarilo odeslat." }));
+
+    const errorCode = typeof error?.code === "string" ? error.code : "SEND_FAILED";
+    const errorMessage = typeof error?.message === "string" ? error.message : "";
+
+    let publicError = "Email se nepodarilo odeslat.";
+
+    if (errorCode === "EAUTH" || /Invalid login|Username and Password not accepted|Missing credentials/i.test(errorMessage)) {
+      publicError = "SMTP prihlaseni selhalo. Zkontroluj SMTP_USER a Gmail App Password.";
+    } else if (/Application-specific password required|534-5\\.7\\.9/i.test(errorMessage)) {
+      publicError = "Google vyzaduje App Password. Pouzij 16mistne heslo aplikace, ne bezne heslo do Gmailu.";
+    } else if (/Please log in via your web browser|534-5\\.7\\.14|suspicious/i.test(errorMessage)) {
+      publicError = "Google prihlaseni zablokoval. Zkontroluj Security alerts nebo Recent activity v Google uctu.";
+    } else if (["ECONNECTION", "ESOCKET", "ETIMEDOUT", "EDNS"].includes(errorCode)) {
+      publicError = "SMTP server neni dostupny. Zkontroluj SMTP_HOST a SMTP_PORT.";
+    }
+
+    res.status(500).end(JSON.stringify({ ok: false, error: publicError, code: errorCode }));
   }
 };
