@@ -159,7 +159,7 @@ footer {
 
 .footer-top {
   display: grid;
-  grid-template-columns: 1.6fr 1fr 1fr;
+  grid-template-columns: minmax(220px, 1.5fr) repeat(3, minmax(150px, 1fr));
   gap: 48px;
   margin-bottom: 24px;
   padding-bottom: 44px;
@@ -236,6 +236,12 @@ footer {
   font-weight: 300;
   text-decoration: none;
   transition: color var(--transition);
+}
+
+.footer-links li {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.875rem;
+  font-weight: 300;
 }
 
 .footer-links a:hover {

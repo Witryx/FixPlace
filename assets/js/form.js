@@ -7,7 +7,7 @@
     return;
   }
 
-  const controls = Array.from(form.querySelectorAll(".form-control"));
+  const controls = Array.from(form.querySelectorAll("input, select, textarea"));
   const submitButton = form.querySelector(".form-submit-btn");
   const submitButtonMarkup = submitButton?.innerHTML ?? "";
   const endpoint = form.dataset.contactEndpoint || form.getAttribute("action") || "/api/contact";
@@ -42,6 +42,13 @@
   };
 
   const syncCustomValidity = (control) => {
+    if (control.type === "checkbox") {
+      const needsRequiredValue = control.hasAttribute("required") && !control.checked;
+
+      control.setCustomValidity(needsRequiredValue ? "Potvrdte prosim informaci o zpracovani osobnich udaju." : "");
+      return;
+    }
+
     const value = typeof control.value === "string" ? control.value.trim() : control.value;
     const needsRequiredValue = control.hasAttribute("required") && value === "";
 
@@ -56,7 +63,7 @@
   const isLocalPreview = ["127.0.0.1", "localhost"].includes(window.location.hostname);
 
   controls.forEach((control) => {
-    const eventName = control.tagName === "SELECT" ? "change" : "input";
+    const eventName = control.tagName === "SELECT" || control.type === "checkbox" ? "change" : "input";
 
     control.addEventListener(eventName, () => {
       updateControlState(control);

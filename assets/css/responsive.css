@@ -100,6 +100,11 @@
   .footer-top {
     grid-template-columns: 1fr 1fr;
   }
+
+  .legal-section {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -336,5 +341,38 @@
 
   .hero-meta {
     gap: 24px;
+  }
+
+  .legal-main {
+    padding-top: calc(var(--nav-offset, 96px) + 28px);
+  }
+
+  .legal-page-section {
+    padding: 0 20px 58px;
+  }
+
+  .legal-heading {
+    margin-bottom: 28px;
+  }
+
+  .legal-lead {
+    font-size: 1rem;
+  }
+
+  .legal-toc {
+    gap: 8px;
+    margin-bottom: 26px;
+  }
+
+  .legal-toc a {
+    width: 100%;
+  }
+
+  .legal-document {
+    padding-top: 20px;
+  }
+
+  .legal-section {
+    padding: 26px 0;
   }
 }

@@ -7,6 +7,7 @@ const requiredFields = [
   "phone",
   "deviceType",
   "issueDescription",
+  "privacyNoticeAccepted",
 ];
 
 const readValue = (value) => (typeof value === "string" ? value.trim() : "");

@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FixPlace — Opravna elektroniky</title>
+  <meta name="description" content="FixPlace je lokální servis elektroniky v Ústí nad Labem. Opravujeme telefony, notebooky, tablety, televizory a další zařízení s jasnou cenou a domluvou předem." />
+  <meta name="theme-color" content="#1d5fa8" />
+  <link rel="canonical" href="https://fixplace.cz/" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
@@ -23,12 +27,12 @@
       <li><a href="#about">O nás</a></li>
       <li><a href="#contact" class="btn-nav">Kontakt</a></li>
     </ul>
-    <button class="hamburger" id="hamburger" aria-label="Otevřít menu" aria-controls="mobileMenu" aria-expanded="false">
+    <button type="button" class="hamburger" id="hamburger" aria-label="Otevřít menu" aria-controls="mobileMenu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
-  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="mobile-menu" id="mobileMenu">
     <a href="#services" data-close-menu>Služby</a>
     <a href="#why" data-close-menu>Proč my</a>
     <a href="#about" data-close-menu>O nás</a>
@@ -435,6 +439,40 @@
         </div>
       </div>
 
+      <div class="contact-details reveal">
+        <a href="tel:+420607170407" class="contact-item">
+          <div class="ci-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.82 19.82 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.82 19.82 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.35 1.89.66 2.78a2 2 0 0 1-.45 2.11L8.05 9.88a16 16 0 0 0 6.07 6.07l1.27-1.27a2 2 0 0 1 2.11-.45c.89.31 1.82.53 2.78.66A2 2 0 0 1 22 16.92z"></path></svg>
+          </div>
+          <div>
+            <div class="ci-label">Telefon</div>
+            <div class="ci-value">+420&nbsp;607&nbsp;170&nbsp;407</div>
+          </div>
+        </a>
+
+        <div class="contact-item">
+          <div class="ci-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 1 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          </div>
+          <div>
+            <div class="ci-label">Lokalita</div>
+            <div class="ci-value">Ústí nad Labem<br />převzetí po domluvě</div>
+          </div>
+        </div>
+
+        <div class="hours-box">
+          <div class="hours-box-title">Dostupnost</div>
+          <div class="hours-row">
+            <span class="day">Pondělí až pátek</span>
+            <span class="time-open">po domluvě</span>
+          </div>
+          <div class="hours-row">
+            <span class="day">Víkend</span>
+            <span class="time-closed">individuálně</span>
+          </div>
+        </div>
+      </div>
+
       <div class="contact-grid">
         <div class="contact-panel reveal">
           <div class="contact-panel-side">
@@ -518,6 +556,10 @@
                 <label class="form-label" for="issueDescription">Popis závady</label>
                 <textarea id="issueDescription" name="issueDescription" class="form-control" placeholder="Popište, co se s vaším zařízením děje. U ostatních zařízení přidejte i značku a model, ať vám rychle řekneme, jestli opravu zvládneme." required></textarea>
               </div>
+              <label class="form-check">
+                <input id="privacyNoticeAccepted" name="privacyNoticeAccepted" type="checkbox" class="form-check-input" required />
+                <span>Beru na vědomí zpracování údajů za účelem vyřízení poptávky podle <a href="ochrana-osobnich-udaju.html" target="_blank" rel="noopener">ochrany osobních údajů</a>.</span>
+              </label>
               <button type="submit" class="btn btn-solid form-submit-btn">
                 Odeslat poptávku
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
@@ -542,11 +584,6 @@
       <div>
         <div class="footer-logo">Fix<em>Place</em></div>
         <p class="footer-tagline">Rychlá, spolehlivá a poctivá oprava elektroniky. Sloužíme zákazníkům od roku 2020.</p>
-        <div class="social-row">
-          <a href="#" class="social-link" title="Facebook" aria-label="Facebook">fb</a>
-          <a href="#" class="social-link" title="Instagram" aria-label="Instagram">ig</a>
-          <a href="#" class="social-link" title="Google" aria-label="Google">G</a>
-        </div>
       </div>
       <div>
         <div class="footer-col-head">Navigace</div>
@@ -558,9 +595,18 @@
         </ul>
       </div>
       <div>
+        <div class="footer-col-head">Dokumenty</div>
+        <ul class="footer-links">
+          <li><a href="obchodni-podminky.html">Obchodní podmínky</a></li>
+          <li><a href="ochrana-osobnich-udaju.html">Ochrana osobních údajů</a></li>
+          <li><a href="cookies.html">Cookies</a></li>
+        </ul>
+      </div>
+      <div>
         <div class="footer-col-head">Kontakt</div>
         <ul class="footer-links">
-          <li><a href="tel:+420607170407">+420 607 170 407</a></li>
+          <li><a href="tel:+420607170407">+420&nbsp;607&nbsp;170&nbsp;407</a></li>
+          <li>Ústí nad Labem</li>
         </ul>
       </div>
     </div>
