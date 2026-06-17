@@ -3,6 +3,10 @@
     width: calc(100% - 30px);
   }
 
+  .nav-logo {
+    width: 118px;
+  }
+
   .nav-links {
     gap: 0.15rem;
   }
@@ -124,7 +128,7 @@
   }
 
   .nav-logo {
-    font-size: 1.18rem;
+    width: 128px;
   }
 
   .nav-links {
