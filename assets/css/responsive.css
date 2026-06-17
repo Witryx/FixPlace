@@ -1,5 +1,5 @@
 @media (max-width: 960px) {
-  nav {
+  body > nav {
     width: calc(100% - 30px);
   }
 
@@ -92,6 +92,10 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .hours-box {
+    grid-column: 1 / -1;
+  }
+
   .contact-panel-side {
     border-right: none;
     border-bottom: 1px solid rgba(195, 214, 238, 0.72);
@@ -112,7 +116,7 @@
     padding: 64px 20px;
   }
 
-  nav {
+  body > nav {
     top: 12px;
     width: calc(100% - 20px);
     height: 64px;
@@ -196,15 +200,39 @@
   .contact-item,
   .hours-box {
     border-radius: 20px;
+    min-height: auto;
   }
 
   .contact-item {
-    padding: 22px 18px 18px;
+    gap: 14px;
+    padding: 18px 18px 18px 20px;
   }
 
   .ci-icon {
     width: 44px;
     height: 44px;
+  }
+
+  .ci-value {
+    font-size: 1rem;
+  }
+
+  .hours-box {
+    grid-column: auto;
+    padding: 18px 18px 16px 20px;
+  }
+
+  .hours-head {
+    gap: 14px;
+  }
+
+  .hours-lines {
+    margin-top: 14px;
+    padding-top: 12px;
+  }
+
+  .hours-row {
+    font-size: 0.88rem;
   }
 
   .contact-panel {

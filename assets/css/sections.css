@@ -994,10 +994,11 @@
 
 .contact-details {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-  width: min(760px, 100%);
-  margin: 0 auto;
+  grid-template-columns: minmax(220px, 0.9fr) minmax(260px, 1fr) minmax(320px, 1.12fr);
+  gap: 14px;
+  align-items: stretch;
+  width: min(1120px, 100%);
+  margin: 32px auto 0;
 }
 
 .contact-item,
@@ -1005,36 +1006,36 @@
   position: relative;
   overflow: hidden;
   border: 1px solid rgba(195, 214, 238, 0.72);
-  border-radius: 24px;
-  background: rgba(255, 255, 255, 0.82);
-  box-shadow: 0 18px 32px rgba(28, 37, 53, 0.06);
+  border-radius: 20px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(248, 251, 255, 0.92) 100%);
+  box-shadow: 0 16px 34px rgba(28, 37, 53, 0.07);
 }
 
 .contact-item::before,
 .hours-box::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(90deg, var(--accent) 0%, #77b3ec 100%);
-  opacity: 0.82;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--accent) 0%, #77b3ec 100%);
+  opacity: 0.72;
 }
 
 .contact-item {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 16px;
-  padding: 24px 22px 22px;
+  min-height: 124px;
+  padding: 22px 24px 22px 26px;
   text-decoration: none;
   transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
 }
 
 .contact-item:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
   border-color: var(--accent-bd);
-  box-shadow: 0 24px 40px rgba(28, 37, 53, 0.1);
+  box-shadow: 0 22px 42px rgba(28, 37, 53, 0.1);
 }
 
 .contact-item > div:last-child {
@@ -1046,8 +1047,8 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  width: 48px;
-  height: 48px;
+  width: 52px;
+  height: 52px;
   border: 1px solid rgba(29, 95, 168, 0.16);
   border-radius: 16px;
   background: linear-gradient(145deg, rgba(29, 95, 168, 0.12), rgba(255, 255, 255, 0.96));
@@ -1065,7 +1066,7 @@
 }
 
 .ci-label {
-  margin-bottom: 6px;
+  margin-bottom: 5px;
   color: var(--text-light);
   font-size: 0.72rem;
   font-weight: 700;
@@ -1075,43 +1076,48 @@
 
 .ci-value {
   color: var(--text);
-  font-size: 1.02rem;
-  font-weight: 600;
-  line-height: 1.45;
+  font-family: var(--font-head);
+  font-size: 1.08rem;
+  font-weight: 700;
+  line-height: 1.34;
+  letter-spacing: -0.01em;
 }
 
 .hours-box {
-  grid-column: 1 / -1;
-  padding: 26px 22px 22px;
+  min-height: 124px;
+  padding: 22px 24px 18px 26px;
 }
 
-.hours-box-title {
-  margin-bottom: 18px;
-  color: var(--text);
-  font-family: var(--font-head);
-  font-size: 0.84rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+.hours-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.hours-lines {
+  display: grid;
+  gap: 7px;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(221, 219, 214, 0.72);
 }
 
 .hours-row {
   display: flex;
   justify-content: space-between;
-  gap: 16px;
-  padding: 12px 0;
-  border-bottom: 1px solid rgba(221, 219, 214, 0.74);
-  font-size: 0.96rem;
+  gap: 12px;
+  color: var(--text-mid);
+  font-size: 0.9rem;
+  line-height: 1.35;
 }
 
 .hours-row:last-child {
-  padding-bottom: 0;
-  border-bottom: none;
+  border-bottom: 0;
 }
 
 .hours-row .day {
   color: var(--text);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .hours-row .time-open {

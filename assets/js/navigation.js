@@ -1,5 +1,5 @@
 (() => {
-  const nav = document.querySelector("nav");
+  const nav = document.querySelector("body > nav");
   const toggleButton = document.getElementById("hamburger");
   const menu = document.getElementById("mobileMenu");
   const revealDelay = 320;
